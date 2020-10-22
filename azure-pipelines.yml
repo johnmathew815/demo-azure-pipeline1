@@ -20,3 +20,9 @@ steps:
     npm build
     npm install mocha chai --save-dev
   displayName: 'npm install and build'
+  
+- task: PublishTestResults@2
+  condition: succeededOrFailed()
+  inputs:
+    testRunner: JUnit
+    testResultsFiles: '**/TEST-RESULTS.xml'  
