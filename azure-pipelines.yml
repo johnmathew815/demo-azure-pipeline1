@@ -17,7 +17,7 @@ steps:
 
 - script: |
     npm install
-    npm run build
+    npm build
     npm install mocha chai --save-dev
     npm test
 
